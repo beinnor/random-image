@@ -1,0 +1,90 @@
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit; }
+
+html {
+  min-height: 100%;
+  color: #627F78; }
+
+body {
+  min-height: 100%;
+  background-color: #C4FFEF;
+  /* unvisited link */
+  /* visited link */
+  /* mouse over link */
+  /* selected link */ }
+  body h1, body h2, body h3 {
+    font-family: 'Muli', sans-serif; }
+  body p {
+    font-family: 'Playfair Display', serif; }
+  body header {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    background-color: #9DCCBF;
+    width: 100%;
+    text-align: center; }
+  body section {
+    text-align: center;
+    margin: 10vh auto;
+    width: 50vh; }
+    body section #imageContainer {
+      margin: 0 auto;
+      height: 50vh;
+      border: 1px solid black;
+      background-position: center center;
+      background-size: cover; }
+      body section #imageContainer .pixabaylogo {
+        margin: 50% auto; }
+    body section #input {
+      text-align: center;
+      width: 100%;
+      display: table; }
+      body section #input #textField {
+        font-family: 'Muli', sans-serif;
+        font-size: 18px;
+        appearance: none;
+        box-shadow: none;
+        border-radius: none;
+        width: 60%; }
+      body section #input #button {
+        width: 40%;
+        font-family: 'Muli', sans-serif;
+        font-size: 18px;
+        appearance: none;
+        box-shadow: none;
+        border-radius: none; }
+  body footer {
+    background-color: #9DCCBF;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 1rem 1rem; }
+  body .pixabaylogo {
+    width: 100px; }
+  body a:link {
+    color: #627F78; }
+  body a:visited {
+    color: #627F78; }
+  body a:hover {
+    color: black; }
+  body a:active {
+    color: black; }
+
+/* Small devices (tablets, up to 768px ) */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.2rem; }
+
+  h2 {
+    font-size: 1.0rem; }
+
+  p {
+    font-size: .8rem; } }
+
+/*# sourceMappingURL=style.css.map */

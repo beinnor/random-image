@@ -1,0 +1,148 @@
+$background-color: #C4FFEF;
+$text-color: #627F78;
+$header-color: #9DCCBF;
+$footer-color: #9DCCBF;
+
+
+// Box sizing
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  min-height: 100%;
+  color: $text-color;
+
+}
+
+body {
+  min-height: 100%;
+
+  background-color: $background-color;
+
+  h1, h2, h3 {
+    font-family: 'Muli', sans-serif;
+  }
+
+  p {
+    font-family: 'Playfair Display', serif;
+  }
+
+
+  header {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    background-color: $header-color;
+    width: 100%;
+    text-align: center;
+  }
+
+  section {
+    text-align: center;
+    margin: 10vh auto;
+    width: 50vh;
+    #imageContainer {
+
+      margin: 0 auto;
+      height: 50vh;
+
+      border: 1px solid black;
+      background-position: center center;
+      background-size: cover;
+
+      .pixabaylogo {
+        margin: 50% auto;
+      }
+    }
+
+    #input {
+
+      text-align: center;
+      width: 100%;
+      display: table;
+      #textField {
+        font-family: 'Muli', sans-serif;
+        font-size: 18px;
+        appearance: none;
+        box-shadow: none;
+        border-radius: none;
+        width: 60%;
+      }
+      #button {
+
+        width: 40%;
+        font-family: 'Muli', sans-serif;
+        font-size: 18px;
+        appearance: none;
+        box-shadow: none;
+        border-radius: none;
+
+      }
+
+
+    }
+  }
+
+  footer {
+    background-color: $footer-color;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 1rem 1rem;
+  }
+
+  .pixabaylogo {
+    width: 100px;
+
+  }
+
+
+  /* unvisited link */
+  a:link {
+      color: $text-color;
+    }
+
+    /* visited link */
+    a:visited {
+      color: $text-color;
+    }
+
+    /* mouse over link */
+    a:hover {
+      color: black;
+    }
+
+    /* selected link */
+    a:active {
+      color: black;
+    }
+
+}
+
+
+
+
+
+/* Small devices (tablets, up to 768px ) */
+@media (max-width: 768px) {
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  h2 {
+    font-size: 1.0rem;
+  }
+
+  p {
+    font-size: .8rem;
+  }
+
+}
