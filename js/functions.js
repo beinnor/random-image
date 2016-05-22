@@ -3,7 +3,7 @@ $(document).ready(function() {
 
    //function definition
    var getImage = function() {
-
+      resetImageArea();
       // store image search string in a variable
       var imageName = $('#imageName').val();
 
@@ -11,7 +11,7 @@ $(document).ready(function() {
       if (imageName === '') {
 
          //If the input field was empty, display a message
-         $('#message').html("<p>Search field is empty...</p>");
+         $('#message').html("<h2>Search field is empty...</h2>");
 
       } else {
 
@@ -19,13 +19,13 @@ $(document).ready(function() {
          var URL = "https://pixabay.com/api/?key="+API_KEY+"&q="+encodeURIComponent(imageName)+"&image_type=photo";// + "?callback=?";
 
          // They must have entered a value, carry on with API call, first display a loading message to notify the user of activity
-         $('#message').html("<p>Your image is on its way!</p>");
+         $('#message').html("<h2>Your image is on its way!</h2>");
 
 
          $.getJSON(URL, function(data) {
 
             //TMDb is nice enough to return a message if nothing was found, so we can base our if statement on this information
-            if (parseInt(data.totalHits) > 0){
+            if (data.totalHits > 0){
 
                var randomImg;
 
@@ -39,16 +39,22 @@ $(document).ready(function() {
 
 
                //Display the poster and a message announcing the result
-               $('#message').html('<p>Well, gee whiz! We found you an image, skip!</p>');
-               //$('#imageContainer').html('<img id="theImage" src=' + data.hits[randomImg].webformatURL + ' />');
+               $('#message').html('<h2>We found you an image!</h2>');
+               $('#imageContainer').empty();
                $('#imageContainer').css('backgroundImage', 'url(' + data.hits[randomImg].webformatURL + ')');
             } else {
-               $('#message').html('<p>No image found!</p>');
+               $('#message').html('<h2>No image found!</h2>');
             }
          });
 
       }
    };
+
+   function resetImageArea() {
+      $('#imageContainer').empty();
+      $('#imageContainer').css('backgroundImage', 'none');
+      $('#imageContainer').html('<a href="http://www.pixabay.com"><img class="pixabaylogo" src="img/pixabay.svg" alt="Pixabay logo"></a>');
+   }
 
 
    $('#button').click(getImage);
